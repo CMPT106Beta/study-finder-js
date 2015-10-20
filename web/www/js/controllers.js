@@ -41,21 +41,21 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope,$http) {
-    $http.get("/api/playlists")
+.controller('studygroupsCtrl', function($scope,$http) {
+    $http.get("/api/studygroups")
     .success(function(response) {
-        $scope.playlists = response;
+        $scope.studygroups = response;
      });
-    /* 
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
+     
+  $scope.studygroups = [
+    { title: 'Pop', id: 1 },
     { title: 'Chill', id: 2 },
     { title: 'Dubstep', id: 3 },
     { title: 'Indie', id: 4 },
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
-  */
+  
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
