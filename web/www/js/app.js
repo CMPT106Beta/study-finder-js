@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellizer'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,16 +22,39 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.run( function($rootScope, $location) {
+    // register listener to watch route changes
+    $rootScope.$on( "$stateChangeStart", function(event, next, current) {
+      if ( $rootScope.authenticated == null ) {
+        // no logged user, we should be going to #login
+        if ( next.templateUrl == "templates/login.html" ) {
+          // already going to #login, no redirect needed
+        } else {
+          // not going to #login, we should redirect now
+          $location.path( "/auth" );
+        }
+      }         
+    });
+})
+.config(function($stateProvider, $urlRouterProvider, $authProvider) {
+
+        // Satellizer configuration that specifies which API
+        // route the JWT should be retrieved from
+        $authProvider.loginUrl = '/api/authenticate';
+
   $stateProvider
 
+      .state('auth', {
+          url: '/auth',
+          templateUrl: '../templates/authView.html',
+          controller: 'AuthController as auth'
+      })
     .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
   .state('app.search', {
     url: '/search',
     views: {
@@ -40,7 +63,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-
   .state('app.browse', {
       url: '/browse',
       views: {
@@ -58,7 +80,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
   .state('app.single', {
     url: '/studygroups/:playlistId',
     views: {
@@ -68,6 +89,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/studygroups');
+
+  $urlRouterProvider.otherwise('/auth');
+
+
 });
+

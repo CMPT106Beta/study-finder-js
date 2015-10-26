@@ -3490,25 +3490,25 @@ ion-infinite-scroll {
 
 /* If you change these, change platform.scss as well */
 .has-header {
-  top: 44px; }
+  top: 54px; }
 
 .no-header {
   top: 0; }
 
 .has-subheader {
-  top: 88px; }
+  top: 108px; }
 
 .has-tabs-top {
-  top: 93px; }
+  top: 103px; }
 
 .has-header.has-subheader.has-tabs-top {
-  top: 137px; }
+  top: 157px; }
 
 .has-footer {
-  bottom: 44px; }
+  bottom: 54px; }
 
 .has-subfooter {
-  bottom: 88px; }
+  bottom: 108px; }
 
 .has-tabs,
 .bar-footer.has-tabs {
@@ -3519,7 +3519,7 @@ ion-infinite-scroll {
     height: auto; }
 
 .has-footer.has-tabs {
-  bottom: 93px; }
+  bottom: 103px; }
 
 .pane {
   -webkit-transform: translate3d(0, 0, 0);
@@ -3862,7 +3862,7 @@ a.subdued {
   box-sizing: border-box;
   padding: 5px;
   width: 100%;
-  height: 44px;
+  height: 54px;
   border-width: 0;
   border-style: solid;
   border-top: 1px solid transparent;
@@ -3904,11 +3904,11 @@ a.subdued {
       background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%); }
   .bar.bar-stable {
     border-color: #b2b2b2;
-    background-color: red;
+    background-color: #dc0d17;
     background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
-    color: #444; }
+    color: #ffffff; }
     .bar.bar-stable .title {
-      color: #444; }
+      color: #ffffff; }
     .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
   .bar.bar-positive {
@@ -3983,13 +3983,13 @@ a.subdued {
     overflow: hidden;
     margin: 0 10px;
     min-width: 30px;
-    height: 43px;
+    height: 53px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 17px;
     font-weight: 500;
-    line-height: 44px; }
+    line-height: 54px; }
     .bar .title.title-left {
       text-align: left; }
     .bar .title.title-right {
@@ -4079,7 +4079,7 @@ a.subdued {
 
 .platform-android .bar .title {
   font-size: 19px;
-  line-height: 44px; }
+  line-height: 54px; }
 
 .bar-light .button {
   border-color: #ddd;
@@ -4105,10 +4105,10 @@ a.subdued {
 
 .bar-stable .button {
   border-color: #b2b2b2;
-  background-color: red;
-  color: #444; }
+  background-color: #dc0d17;
+  color: #ffffff; }
   .bar-stable .button:hover {
-    color: #444;
+    color: #ffffff;
     text-decoration: none; }
   .bar-stable .button.active,
   .bar-stable .button.activated {
@@ -4119,7 +4119,7 @@ a.subdued {
     border-color: transparent;
     background: none;
     box-shadow: none;
-    color: #444;
+    color: #ffffff;
     font-size: 17px; }
   .bar-stable .button.button-icon {
     border-color: transparent;
@@ -4296,7 +4296,7 @@ a.subdued {
   border-top-width: 1px;
   border-bottom-width: 0;
   background-position: top;
-  height: 44px; }
+  height: 54px; }
   .bar-footer.item-input-inset {
     position: absolute; }
 
@@ -4304,14 +4304,14 @@ a.subdued {
   padding: 0; }
 
 .bar-subheader {
-  top: 44px;
+  top: 54px;
   display: block;
-  height: 44px; }
+  height: 54px; }
 
 .bar-subfooter {
-  bottom: 44px;
+  bottom: 54px;
   display: block;
-  height: 44px; }
+  height: 54px; }
 
 .nav-bar-block {
   position: absolute;
@@ -4353,9 +4353,9 @@ a.subdued {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   border-color: #b2b2b2;
-  background-color: #ff0000;
+  background-color: #DC0D17;
   background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
-  color: #444;
+  color: #ffffff;
   position: absolute;
   bottom: 0;
   z-index: 5;
@@ -4366,8 +4366,8 @@ a.subdued {
   background-size: 0;
   line-height: 49px; }
   .tabs .tab-item .badge {
-    background-color: #444;
-    color: #ff0000; }
+    background-color: #ffffff;
+    color: #DC0D17; }
   @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .tabs {
       padding-top: 2px;
@@ -4392,13 +4392,13 @@ a.subdued {
 .tabs-stable > .tabs,
 .tabs.tabs-stable {
   border-color: #b2b2b2;
-  background-color: #ff0000;
+  background-color: #DC0D17;
   background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
-  color: #444; }
+  color: #ffffff; }
   .tabs-stable > .tabs .tab-item .badge,
   .tabs.tabs-stable .tab-item .badge {
-    background-color: #444;
-    color: #ff0000; }
+    background-color: #ffffff;
+    color: #DC0D17; }
 
 .tabs-positive > .tabs,
 .tabs.tabs-positive {
@@ -4520,7 +4520,7 @@ a.subdued {
   top: 4%; }
 
 .tabs-striped.tabs-stable .tabs {
-  background-color: #ff0000; }
+  background-color: #DC0D17; }
 
 .tabs-striped.tabs-stable .tab-item {
   color: rgba(68, 68, 68, 0.4);
@@ -4700,7 +4700,7 @@ a.subdued {
   background-image: none; }
 
 .tabs-striped.tabs-background-stable .tabs {
-  background-color: #ff0000;
+  background-color: #DC0D17;
   background-image: none; }
 
 .tabs-striped.tabs-background-positive .tabs {
@@ -4750,7 +4750,7 @@ a.subdued {
       opacity: 1; }
 
 .tabs-striped.tabs-color-stable .tab-item {
-  color: rgba(255, 0, 0, 0.4);
+  color: rgba(220, 13, 23, 0.4);
   opacity: 1; }
   .tabs-striped.tabs-color-stable .tab-item .badge {
     opacity: 0.4; }
@@ -4758,8 +4758,8 @@ a.subdued {
   .tabs-striped.tabs-color-stable .tab-item.active,
   .tabs-striped.tabs-color-stable .tab-item.activated {
     margin-top: -2px;
-    color: #ff0000;
-    border: 0 solid #ff0000;
+    color: #DC0D17;
+    border: 0 solid #DC0D17;
     border-top-width: 2px; }
     .tabs-striped.tabs-color-stable .tab-item.tab-item-active .badge,
     .tabs-striped.tabs-color-stable .tab-item.active .badge,
@@ -4901,7 +4901,7 @@ a.subdued {
 
 .tabs-background-stable .tabs,
 .tabs-background-stable > .tabs {
-  background-color: #ff0000;
+  background-color: #DC0D17;
   background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
   border-color: #b2b2b2; }
 
@@ -4963,15 +4963,15 @@ a.subdued {
       opacity: 1; }
 
 .tabs-color-stable .tab-item {
-  color: rgba(255, 0, 0, 0.4);
+  color: rgba(220, 13, 23, 0.4);
   opacity: 1; }
   .tabs-color-stable .tab-item .badge {
     opacity: 0.4; }
   .tabs-color-stable .tab-item.tab-item-active,
   .tabs-color-stable .tab-item.active,
   .tabs-color-stable .tab-item.activated {
-    color: #ff0000;
-    border: 0 solid #ff0000; }
+    color: #DC0D17;
+    border: 0 solid #DC0D17; }
     .tabs-color-stable .tab-item.tab-item-active .badge,
     .tabs-color-stable .tab-item.active .badge,
     .tabs-color-stable .tab-item.activated .badge {
@@ -5094,7 +5094,7 @@ ion-tabs.tabs-color-active-stable .tab-item {
   ion-tabs.tabs-color-active-stable .tab-item.tab-item-active,
   ion-tabs.tabs-color-active-stable .tab-item.active,
   ion-tabs.tabs-color-active-stable .tab-item.activated {
-    color: #ff0000; }
+    color: #DC0D17; }
 
 ion-tabs.tabs-color-active-positive .tab-item {
   color: #444; }
@@ -5192,7 +5192,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
 /* If you change this, change platform.scss as well */
 .tabs-top > .tabs,
 .tabs.tabs-top {
-  top: 44px;
+  top: 54px;
   padding-top: 0;
   background-position: bottom;
   border-top-width: 0;
@@ -5313,7 +5313,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   .tab-item.tab-item-active.tab-item-stable,
   .tab-item.active.tab-item-stable,
   .tab-item.activated.tab-item-stable {
-    color: #ff0000; }
+    color: #DC0D17; }
   .tab-item.tab-item-active.tab-item-positive,
   .tab-item.active.tab-item-positive,
   .tab-item.activated.tab-item-positive {
@@ -5458,21 +5458,21 @@ ion-tabs.tabs-color-active-dark .tab-item {
   .modal.ng-leave-active {
     bottom: 0; }
   .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) {
-    height: 44px; }
+    height: 54px; }
     .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) > * {
       margin-top: 0; }
   .platform-ios.platform-cordova .modal-wrapper .modal .tabs-top > .tabs,
   .platform-ios.platform-cordova .modal-wrapper .modal .tabs.tabs-top {
-    top: 44px; }
+    top: 54px; }
   .platform-ios.platform-cordova .modal-wrapper .modal .has-header,
   .platform-ios.platform-cordova .modal-wrapper .modal .bar-subheader {
-    top: 44px; }
+    top: 54px; }
   .platform-ios.platform-cordova .modal-wrapper .modal .has-subheader {
-    top: 88px; }
+    top: 108px; }
   .platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-tabs-top {
-    top: 93px; }
+    top: 103px; }
   .platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-subheader.has-tabs-top {
-    top: 137px; }
+    top: 157px; }
   .modal-backdrop-bg {
     -webkit-transition: opacity 300ms ease-in-out;
     transition: opacity 300ms ease-in-out;
@@ -5855,8 +5855,8 @@ ion-tabs.tabs-color-active-dark .tab-item {
     color: #444; }
   .item.item-stable {
     border-color: #b2b2b2;
-    background-color: #ff0000;
-    color: #444; }
+    background-color: #DC0D17;
+    color: #ffffff; }
   .item.item-positive {
     border-color: #0c60ee;
     background-color: #387ef5;
@@ -6069,8 +6069,8 @@ a.item-content {
 
 .item-complex.item-stable > .item-content {
   border-color: #b2b2b2;
-  background-color: #ff0000;
-  color: #444; }
+  background-color: #DC0D17;
+  color: #ffffff; }
   .item-complex.item-stable > .item-content.active, .item-complex.item-stable > .item-content:active {
     border-color: #a2a2a2;
     background-color: #e5e5e5; }
@@ -6725,8 +6725,8 @@ button.item.item-button-right {
 
 .tabs .tab-item .badge.badge-stable,
 .badge.badge-stable {
-  background-color: #ff0000;
-  color: #444; }
+  background-color: #DC0D17;
+  color: #ffffff; }
 
 .tabs .tab-item .badge.badge-positive,
 .badge.badge-positive {
@@ -6922,8 +6922,8 @@ button.item.item-button-right {
     stroke: #fff;
     fill: #fff; }
   .spinner.spinner-stable {
-    stroke: #ff0000;
-    fill: #ff0000; }
+    stroke: #DC0D17;
+    fill: #DC0D17; }
   .spinner.spinner-positive {
     stroke: #387ef5;
     fill: #387ef5; }
@@ -6964,7 +6964,7 @@ button.item.item-button-right {
   stop-color: #fff; }
 
 .spinner-spiral.spinner-stable .stop2 {
-  stop-color: #ff0000; }
+  stop-color: #DC0D17; }
 
 .spinner-spiral.spinner-positive .stop2 {
   stop-color: #387ef5; }
@@ -7004,7 +7004,7 @@ legend {
   font-size: 21px;
   line-height: 2.85714; }
   legend small {
-    color: #ff0000;
+    color: #DC0D17;
     font-size: 1.07143; }
 
 label,
@@ -7297,7 +7297,7 @@ textarea[disabled],
 input[readonly]:not(.cloned-text-input),
 textarea[readonly]:not(.cloned-text-input),
 select[readonly] {
-  background-color: #ff0000;
+  background-color: #DC0D17;
   cursor: not-allowed; }
 
 input[type="radio"][disabled],
@@ -7978,8 +7978,8 @@ input:checked + .checkbox-icon:after {
     background: #fff;
     color: #444; }
   .item-select.item-stable select {
-    background: #ff0000;
-    color: #444; }
+    background: #DC0D17;
+    color: #ffffff; }
   .item-select.item-stable:after, .item-select.item-stable .input-label {
     color: #656565; }
   .item-select.item-positive select {
@@ -8037,8 +8037,8 @@ progress {
  */
 .button {
   border-color: #b2b2b2;
-  background-color: #ff0000;
-  color: #444;
+  background-color: #DC0D17;
+  color: #ffffff;
   position: relative;
   display: inline-block;
   margin: 0;
@@ -8055,7 +8055,7 @@ progress {
   line-height: 42px;
   cursor: pointer; }
   .button:hover {
-    color: #444;
+    color: #ffffff;
     text-decoration: none; }
   .button.active,
   .button.activated {
@@ -8124,10 +8124,10 @@ progress {
         color: #fff; }
   .button.button-stable {
     border-color: #b2b2b2;
-    background-color: #ff0000;
-    color: #444; }
+    background-color: #DC0D17;
+    color: #ffffff; }
     .button.button-stable:hover {
-      color: #444;
+      color: #ffffff;
       text-decoration: none; }
     .button.button-stable.active,
     .button.button-stable.activated {
@@ -8971,10 +8971,10 @@ a.button {
   border-color: #ddd; }
 
 .stable, a.stable {
-  color: #ff0000; }
+  color: #DC0D17; }
 
 .stable-bg {
-  background-color: #ff0000; }
+  background-color: #DC0D17; }
 
 .stable-border {
   border-color: #b2b2b2; }
@@ -9070,7 +9070,7 @@ a.button {
  * Platform specific tweaks
  */
 .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) {
-  height: 64px; }
+  height: 74px; }
   .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
     margin-top: 19px !important; }
   .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
@@ -9078,23 +9078,23 @@ a.button {
 
 .platform-ios.platform-cordova:not(.fullscreen) .tabs-top > .tabs,
 .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top {
-  top: 64px; }
+  top: 74px; }
 
 .platform-ios.platform-cordova:not(.fullscreen) .has-header,
 .platform-ios.platform-cordova:not(.fullscreen) .bar-subheader {
-  top: 64px; }
+  top: 74px; }
 
 .platform-ios.platform-cordova:not(.fullscreen) .has-subheader {
-  top: 108px; }
+  top: 128px; }
 
 .platform-ios.platform-cordova:not(.fullscreen) .has-header.has-tabs-top {
-  top: 113px; }
+  top: 123px; }
 
 .platform-ios.platform-cordova:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
-  top: 157px; }
+  top: 177px; }
 
 .platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) {
-  height: 44px; }
+  height: 54px; }
   .platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
     margin-top: -1px; }
   .platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) > * {
@@ -9102,10 +9102,10 @@ a.button {
 
 .platform-ios.platform-cordova .popover .has-header,
 .platform-ios.platform-cordova .popover .bar-subheader {
-  top: 44px; }
+  top: 54px; }
 
 .platform-ios.platform-cordova .popover .has-subheader {
-  top: 88px; }
+  top: 108px; }
 
 .platform-ios.platform-cordova.status-bar-hide {
   margin-bottom: 20px; }

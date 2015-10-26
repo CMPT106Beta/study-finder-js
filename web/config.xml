@@ -17,4 +17,5 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+  <access origin="https://ryans.tech:8000" />
 </widget>

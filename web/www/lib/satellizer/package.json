@@ -1,0 +1,108 @@
+{
+  "_args": [
+    [
+      "satellizer",
+      "C:\\xampp\\htdocs\\study-finder-js\\web"
+    ]
+  ],
+  "_from": "satellizer@*",
+  "_id": "satellizer@0.12.5",
+  "_inCache": true,
+  "_location": "/satellizer",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "email": "sakhat@gmail.com",
+    "name": "sahat"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "satellizer",
+    "raw": "satellizer",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/satellizer/-/satellizer-0.12.5.tgz",
+  "_shasum": "8e0251e8255b123de9fe96a0757dfcb64967fcd9",
+  "_shrinkwrap": null,
+  "_spec": "satellizer",
+  "_where": "C:\\xampp\\htdocs\\study-finder-js\\web",
+  "author": {
+    "email": "sahat@me.com",
+    "name": "Sahat Yalkabov",
+    "url": "http://sahatyalkabov.com"
+  },
+  "bugs": {
+    "url": "https://github.com/sahat/satellizer/issues"
+  },
+  "dependencies": {},
+  "description": "Token-based AngularJS Authentication",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-complexity": "~0.3.0",
+    "gulp-header": "~1.7.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "~1.4.0",
+    "karma": "^0.13.9",
+    "karma-coverage": "^0.5.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "8e0251e8255b123de9fe96a0757dfcb64967fcd9",
+    "tarball": "http://registry.npmjs.org/satellizer/-/satellizer-0.12.5.tgz"
+  },
+  "gitHead": "65de901ef235f621a9393f463d79f7bf3b17ae8f",
+  "homepage": "https://github.com/sahat/satellizer",
+  "installable": true,
+  "license": "MIT",
+  "main": "satellizer.min.js",
+  "maintainers": [
+    {
+      "name": "sahat",
+      "email": "sakhat@gmail.com"
+    }
+  ],
+  "name": "satellizer",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahat/satellizer.git"
+  },
+  "scripts": {
+    "start": "node ./examples/server/node/server.js",
+    "test": "karma start"
+  },
+  "tags": [
+    "angular",
+    "angularjs",
+    "auth",
+    "authentication",
+    "facebook",
+    "foursquare",
+    "github",
+    "google",
+    "jwt",
+    "linkedin",
+    "login",
+    "oauth",
+    "oauth 1.0",
+    "oauth 2.0",
+    "oauth1",
+    "oauth2",
+    "sign-in",
+    "social",
+    "token",
+    "twitch",
+    "twitter",
+    "yahoo"
+  ],
+  "version": "0.12.5"
+}

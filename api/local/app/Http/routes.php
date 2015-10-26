@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/playlists',function(){
-    return \App\Playlist::all();
+Route::group(['middleware' => 'jwt.auth'], function() {
+    Route::get('/groups',function(){
+        return \App\Groups::all();
+    });
 });
+
+Route::resource('authenticate', 'AuthenticateController', ['only' => ['index']]);
+Route::post('authenticate', 'AuthenticateController@authenticate');
+

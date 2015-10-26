@@ -12,7 +12,7 @@
   "proxies": [
     {
       "path": "/api",
-      "proxyUrl": "http://localhost/study-finder-js/api"
+      "proxyUrl": "http://ryans.tech/study-finder-js/api"
     }
   ]
 }
