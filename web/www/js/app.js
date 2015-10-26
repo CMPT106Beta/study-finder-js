@@ -22,18 +22,22 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellize
   });
 })
 
-.run( function($rootScope, $location) {
+.run( function($rootScope, $location, $state) {
     // register listener to watch route changes
-    $rootScope.$on( "$stateChangeStart", function(event, next, current) {
-      if ( $rootScope.authenticated == null ) {
-        // no logged user, we should be going to #login
-        if ( next.templateUrl == "templates/login.html" ) {
-          // already going to #login, no redirect needed
-        } else {
-          // not going to #login, we should redirect now
-          $location.path( "/auth" );
-        }
-      }         
+    $rootScope.$on( "$stateChangeStart", function(event, toState) {
+         var user = JSON.parse(localStorage.getItem('user'));
+         console.log(user);
+      if (user) {
+          if(toState.name == 'auth'){
+              event.preventDefault();
+              $state.go('app.browse');
+          }
+      }else{
+          if(toState.name != 'auth'){
+            event.preventDefault();
+            $state.go('auth');
+          }
+      }       
     });
 })
 .config(function($stateProvider, $urlRouterProvider, $authProvider) {
