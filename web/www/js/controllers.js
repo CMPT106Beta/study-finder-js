@@ -53,7 +53,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicSlideBoxDelegate) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -61,7 +61,12 @@ angular.module('starter.controllers', [])
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
+	
+	//fucntion that changes the slide for authView
+	$scope.changeSlide = function(index){
+		$ionicSlideBoxDelegate.slide(index,500);
+	}
+	
   // Form data for the login modal
   $scope.loginData = {};
 
