@@ -117,3 +117,12 @@ angular.module('starter.controllers', [])
   
 })
 
+.controller('profileController', function($scope,$http) {
+    $scope.profile = { 
+	  username: 'username',
+	  email: 'email',
+	  program: 'program'
+	}
+    });
+
+
