@@ -121,8 +121,19 @@ angular.module('starter.controllers', [])
     $scope.profile = { 
 	  username: 'username',
 	  email: 'email',
-	  program: 'program'
-	}
+	  program: 'program',
+	  userID: 1
+	};
+	$scope.updateProfile = function(userID) {
+	  $http.post('/api/user/update', $scope.profile)
+		.success(function(data) {
+			$scope.profile = data;
+			console.log(data);
+			})
+		.error(function(data) {
+			console.log('Error: ' + data)
+		});
+	};
     });
 
 

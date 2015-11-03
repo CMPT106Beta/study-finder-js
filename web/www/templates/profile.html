@@ -1,9 +1,22 @@
 <ion-view view-title="Profile">
   <ion-content>
-  <ion-list>
-  <ion-item>{{ profile.username }}</ion-item>
-  <ion-item>{{ profile.email }}</ion-item>
-  <ion-item>{{ profile.program }}</ion-item>
-  </ion-list>
+	<ion-list>
+		<ion-item>{{ profile.email }}</ion-item>
+		<form ng-submit="updateProfile(userID)">
+			<div class="list">
+				<label class="item item-input">
+					<span class="input-label">Username</span>
+					<input type="text" ng-model="profile.username">
+				</label>
+				<label class="item item-input">
+					<span class="input-label">Program</span>
+					<input type="text" ng-model="profile.program">
+				</label>
+				<label class="item">
+					<button class="button button-block button-positive" type="submit">Save</button>
+				</label>
+			</div>	
+		</form>
+	</ion-list>
   </ion-content>
 </ion-view>
