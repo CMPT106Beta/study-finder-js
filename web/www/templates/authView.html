@@ -1,10 +1,9 @@
 <!--Authentication view: Login and Sign up pages are sliders that swithces between pages by swiping the screen or clicking the pager-->
 <link href="css/style.css" rel="stylesheet">
-<body ng-controller="AppCtrl">
+<ion-content ng-controller="AppCtrl">
 	<ion-slide-box pager-click="changeSlide(index)">
 		<ion-slide>
 			<ion-header-bar class="bar-dark"><h1 class="title">Login</h1></ion-header-bar>
-			
 			<div class="col-sm-4 col-sm-offset-4 ">
 				<div class="well list padding has-header">  
 				<img class="item item-image" src="..\img\slogo3.png"> 
@@ -22,13 +21,10 @@
 								<input type="password" class="form-control" placeholder="Password" ng-model="auth.password">
 							</label>
 						</div>
-						<button class="btn btn-primary button button-dark" ng-click="auth.login()">Submit</button>
+						<button class="btn btn-primary button button-dark button-block" ng-click="auth.login()">Submit</button>
 					</form>
-					
 				</div>
-				
 			</div>
-			
 		</ion-slide>
 		
 		<ion-slide>
@@ -46,4 +42,4 @@
 			</div>
 		</ion-slide>
 	</ion-slide-box>
-</body>
+</ion-content>
