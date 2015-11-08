@@ -92,7 +92,24 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellize
         controller: 'studygroupsCtrl'
       }
     }
-  });
+  })
+    .state('app.home', {
+      url: '/home',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/home.html',
+          controller: 'studygroupsCtrl'
+        }
+      }
+    })
+	.state('app.createGroups', {
+      url: '/createGroups',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/createGroups.html'
+        }
+      }
+    });
 
   $urlRouterProvider.otherwise('/auth');
 
