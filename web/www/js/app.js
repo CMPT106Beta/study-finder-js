@@ -109,7 +109,17 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellize
           templateUrl: 'templates/createGroups.html'
         }
       }
-    });
+    })
+  .state('app.profile', {
+    url: '/profile',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/profile.html',
+		controller: 'profileController'
+      }
+    }
+  });
+
 
   $urlRouterProvider.otherwise('/auth');
 
