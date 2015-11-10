@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Group;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Support\Facades\Input;
 class GroupController extends Controller
 {
     /**
@@ -15,7 +16,7 @@ class GroupController extends Controller
      */
     public function index()
     {
-        //
+        return Group::all();
     }
 
     /**
@@ -34,9 +35,14 @@ class GroupController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
-        //
+        $data = Input::all();
+        $data['user_id'] = 1;
+        $group = \App\Group::create($data);
+        return $group;
+
     }
 
     /**
@@ -47,7 +53,8 @@ class GroupController extends Controller
      */
     public function show($id)
     {
-        //
+        $group = \App\Group::find($id);
+        return $group;
     }
 
     /**
