@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers',[])
 
     .controller('AuthController',function ($auth, $state, $http, $rootScope) {
 
@@ -98,12 +98,13 @@ angular.module('starter.controllers', [])
 })
 .controller('profileController', function($scope,$http) {
     $scope.profile = { 
+	  picture: '',
 	  username: 'username',
 	  email: 'email',
 	  program: 'program',
 	  userID: 1
 	};
-	$scope.updateProfile = function(userID) {
+	$scope.updateProfile = function() {
 	  $http.post('/api/user/update', $scope.profile)
 		.success(function(data) {
 			$scope.profile = data;
@@ -158,7 +159,5 @@ angular.module('starter.controllers', [])
 	
 })*/
 
-
-
-
+	
 

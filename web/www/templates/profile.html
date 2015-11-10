@@ -1,9 +1,14 @@
+
 <ion-view view-title="Profile">
   <ion-content>
 	<ion-list>
 		<ion-item>{{ profile.email }}</ion-item>
-		<form ng-submit="updateProfile(userID)">
+		<form ng-submit="updateProfile()">
 			<div class="list">
+				<label class="item item-input">
+					<input type="file" name="filename" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" ng-model="profile.picture">
+				</label>
+				<img id="image-holder" src="#" alt="your image" />
 				<label class="item item-input">
 					<span class="input-label">Username</span>
 					<input type="text" ng-model="profile.username">
