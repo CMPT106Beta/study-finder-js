@@ -25,9 +25,8 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellize
 .run( function($rootScope, $location, $state) {
     // register listener to watch route changes
     $rootScope.$on( "$stateChangeStart", function(event, toState) {
-         var user = JSON.parse(localStorage.getItem('user'));
-         console.log(user);
-      if (user) {
+         var token = localStorage.getItem('satellizer_token');
+      if (token) {
           if(toState.name == 'auth'){
               event.preventDefault();
               $state.go('app.browse');
@@ -37,8 +36,9 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellize
             event.preventDefault();
             $state.go('auth');
           }
-      }       
-    });
+      }
+    })
+             
 })
 .config(function($stateProvider, $urlRouterProvider, $authProvider) {
 
@@ -47,11 +47,18 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellize
         $authProvider.loginUrl = '/api/authenticate';
 
   $stateProvider
-
       .state('auth', {
           url: '/auth',
           templateUrl: '../templates/authView.html',
           controller: 'AuthController as auth'
+      })
+      .state('logout', {
+          url: '/logout',
+         controller: function($state){
+             console.log('log out');
+             localStorage.clear();
+             $state.go('auth');
+         }
       })
     .state('app', {
     url: '/app',

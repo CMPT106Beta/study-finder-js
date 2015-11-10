@@ -34,10 +34,13 @@
 					<img class="item item-image" src="..\img\slogo3.png"> 
 					<label class = "item item-input">
 						<span class="input-label">Email:</span>
+                        <input type="email" class="form-control" placeholder="...@sfu.ca" ng-model="auth.email">
 					</label>
 					<label class = "item item-input">
 						<span class="input-label">Password:</span>
+                        <input type="password" class="form-control" placeholder="Password" ng-model="auth.password">
 					</label>
+                    <button class="btn btn-primary button button-dark button-block" ng-click="auth.signup()">Sign Up</button>
 				</div>
 			</div>
 		</ion-slide>

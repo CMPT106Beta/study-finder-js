@@ -11,12 +11,17 @@
 |
 */
 
+Route::post('signup','RegistrationController@create');
+
+
 Route::group(['middleware' => 'jwt.auth'], function() {
     Route::get('/groups',function(){
-        return \App\Groups::all();
+        return \App\Group::all();
     });
 });
 
 Route::resource('authenticate', 'AuthenticateController', ['only' => ['index']]);
 Route::post('authenticate', 'AuthenticateController@authenticate');
+Route::get('authenticate/user','AuthenticateController@getAuthenticatedUser');
+
 
