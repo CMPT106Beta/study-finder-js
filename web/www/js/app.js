@@ -113,7 +113,8 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellize
       url: '/createGroups',
       views: {
         'menuContent': {
-          templateUrl: 'templates/createGroups.html'
+          templateUrl: 'templates/createGroups.html',
+		  controller: 'createCtrl'
         }
       }
     })

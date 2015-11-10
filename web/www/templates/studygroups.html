@@ -2,7 +2,8 @@
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="studygroup in studygroups" href="#/app/studygroups/{{studygroup.id}}">
-        {{studygroup.name}}
+        {{studygroup.course}}
+		{{studygroup.location}}
       </ion-item>
     </ion-list>
   </ion-content>

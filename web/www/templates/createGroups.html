@@ -2,6 +2,54 @@
   <ion-content>
     <ion-list class="card">
 		<ion-item class="item-divider">Create Study Groups</ion-item>
+		<form ng-submit="createInput()">
+			<ion-item class="item-input">
+				<label>
+					<span class="input-label">Course</span>
+					<input type="text" ng-model="create.course">
+				</label>
+			</ion-item>
+			<ion-item class="item-input">
+				<label>
+					<span class="input-label">Time</span>
+					<select ng-model="create.time">
+					  <option>1:00</option>
+					  <option>2:00</option>
+					  <option>3:00</option>
+					  <option>4:00</option>
+					  <option>ITS KHANGURA TIME</option>
+					</select>
+				</label>
+			</ion-item>
+			<ion-item class="item-input">
+				<label>
+					<span class="input-label">Location</span>
+					<input type="text" ng-model="create.location">
+				</label>
+			</ion-item>
+			<ion-item class="item-input">
+				<label>
+					<span class="input-label">Description</span>
+					<input type="text" ng-model="create.description">
+				</label>
+			</ion-item>
+			<ion-item class="item-input">
+				<label>
+					<span class="input-label">Capacity</span>
+					<select ng-model="create.capacity">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						
+					</select>
+					
+				</label>
+			</ion-item>
+			<ion-item>
+				<button class="button button-block button-positive" type="submit">Save</button>
+			</ion-item>
+		</form>
 	</ion-list>
   </ion-content>
 </ion-view>

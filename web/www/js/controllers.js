@@ -115,4 +115,50 @@ angular.module('starter.controllers', [])
 	};
     })
 
+.controller('createCtrl', function($scope,$http) {
+	$scope.create = {
+		course: 'course',
+		startTime: 1,
+		location: 'location',
+		description: 'description',
+		capacity: 1,
+	}
+	
+	$scope.createInput = function() {
+	  $http.post('/api/group', $scope.create)
+		.success(function(data) {
+			$scope.create = data;
+			console.log(data);
+			})
+		.error(function(data) {
+			console.log('Error: ' + data)
+		});
+	};
+	})
+
+/*.controller('searchCtrl', function($scope,$http) {
+	$scope.search = {[
+		course: 'course',
+		time: 'time',
+		capacity: 1,
+		groupID: 1
+	]}
+	
+	$scope.searchInput = function(groupID) {
+	  $http.put('/api/group', $scope.search)
+		.success(function(data) {
+			$scope.create = data;
+			console.log(data);
+			})
+		.error(function(data) {
+			console.log('Error: ' + data)
+		});
+	}
+	
+	
+})*/
+
+
+
+
 
