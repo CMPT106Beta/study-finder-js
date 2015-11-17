@@ -126,16 +126,13 @@ angular.module('starter.controllers',[])
 		startTime: '',
 		location: '',
 		description: '',
-		capacity: 1,
 		date: '',
-		course: ''
 	}
 	
 	$scope.createInput = function() {
 	  $http.post('/api/groups', $scope.create)
 		.success(function(data) {
 			$scope.create = data;
-			console.log(data);
 			})
 		.error(function(data) {
 			console.log('Error: ' + data)
@@ -144,7 +141,7 @@ angular.module('starter.controllers',[])
 	})
 .controller('studyGroupCtrl', function($scope, $http, $location, $stateParams){
     var id = $stateParams.id;
-    $http.get('api/groups/'+id).success(function(data) {
+    $http.get('/api/groups/'+id).success(function(data) {
         $scope.group = data;
       });
 });

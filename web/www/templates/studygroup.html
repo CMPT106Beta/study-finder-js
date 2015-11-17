@@ -1,25 +1,27 @@
 <ion-view view-title="StudyGroup">
   <ion-content>
-    <ion-list>
+    <ion-list class="card">
 		<ion-item>
-			{{group.course}}
+			<p>Course: {{group.courseCode}} {{group.courseNumber}} </p>
 		</ion-item>
 		<ion-item>
-			{{group.startTime}}
+			<p>Start Time: {{group.startTime}} </p>
 		</ion-item>
 		<ion-item>
-			{{group.date}}
+			<p>Date: {{group.date}}</p>
 		</ion-item>
 		<ion-item>
-			{{group.capacity}}
+			<p>Capeacity: {{group.capacity}}</p>
 		</ion-item>
 		<ion-item>
-			{{group.location}}
+			<p>Location: {{group.location}}</p>
 		</ion-item>
 		<ion-item>
-			{{group.description}}
+			<p>Description:{{group.description}}</p>
+		</ion-item>
+		<ion-item>
+			<button class="button button-block button-dark">Join</button>
 		</ion-item>
 	</ion-list>
-	
   </ion-content>
 </ion-view>
