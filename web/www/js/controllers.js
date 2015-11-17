@@ -117,15 +117,18 @@ angular.module('starter.controllers',[])
     })
 
 .controller('createCtrl', function($scope,$http) {
+	$scope.codes = {
+		options: ["ACMA","ALS","APMA","ARAB", "ARCH", "ASC", "BISC", "BOT", "BPK", "BUEC", "BUS", "CHEM", "CHIN", "CMNS", "CMPT", "COGS", "CRIM", "DEVS", "DIAL", "DMED", "EAS", "EASC", "EBP", "ECO", "ECON", "EDPR", "EDUC", "ENGL", "ENSC", "ETEC", "EVSC", "EXPL", "FAL", "FAN", "FNLG", "FNST", "FPA", "FREN", "GEOG", "GERM", "GERO", "GRK", "GS", "GSWS", "HIST", "HS", "HSCI", "HUM", "IAT", "IS", "ISPO", "ITAL", "JAPN", "LANG", "LAS", "LBRL", "LBST", "LING", "LS", "MACM", "MASC", "MATH", "MBB", "MSE", "MSSC", "MTEC", "NUSC", "ONC", "PERS", "PHIL", "PHYS", "PLCY", "POL", "PSYC",, "PUB", "REM", "SA", "SAR", "SCD", "SCI", "SPAN", "STAT", "URB", "WL"]
+}
 	$scope.create = {
 		courseCode: '',
 		courseNumber: 1,
-		startTime: 1,
+		startTime: '',
 		location: '',
 		description: '',
 		capacity: 1,
 		date: '',
-		course: courseCode + courseNumber,
+		course: ''
 	}
 	
 	$scope.createInput = function() {
