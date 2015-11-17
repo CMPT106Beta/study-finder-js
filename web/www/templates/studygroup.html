@@ -1,5 +1,14 @@
 <ion-view view-title="Playlist">
   <ion-content>
-    <h1>Study Group</h1>
+    <ion-list>
+		<ion-item ng-repeat="studygroup in studygroups">
+			{{studygroup.course}}
+			{{studygroup.startTime}}
+			{{studygroup.date}}
+			{{studygroup.capacity}}
+			{{studygroup.location}}
+			{{studygroup.description}}
+      </ion-item>
+	</ion-list>
   </ion-content>
 </ion-view>

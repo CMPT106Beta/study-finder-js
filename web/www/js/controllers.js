@@ -118,12 +118,14 @@ angular.module('starter.controllers',[])
 
 .controller('createCtrl', function($scope,$http) {
 	$scope.create = {
-		courseCode: 'course',
+		courseCode: '',
 		courseNumber: 1,
 		startTime: 1,
-		location: 'location',
-		description: 'description',
+		location: '',
+		description: '',
 		capacity: 1,
+		date: '',
+		course: courseCode + courseNumber,
 	}
 	
 	$scope.createInput = function() {

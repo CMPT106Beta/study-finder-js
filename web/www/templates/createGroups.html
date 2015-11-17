@@ -1,12 +1,15 @@
 <ion-view view-title="Create">
   <ion-content>
-    <ion-list class="card">
+    <ion-list class="card has-header">
 		<ion-item class="item-divider">Create Study Groups</ion-item>
 		<form ng-submit="createInput()">
 			<ion-item class="item-input">
 				<label>
 					<span class="input-label">Course Code</span>
-					<input type="text" ng-model="create.courseCode">
+					<select ng-model="create.courseCode">
+						<option>CMPT</option>
+						<option>MATH</option>
+					</select>
 				</label>
 				<label>
 					<span class="input-label">Course Number</span>
@@ -15,14 +18,27 @@
 			</ion-item>
 			<ion-item class="item-input">
 				<label>
-					<span class="input-label">Time</span>
+					<span class="input-label">Start Time</span>
 					<select ng-model="create.time">
 					  <option>1:00</option>
 					  <option>2:00</option>
 					  <option>3:00</option>
 					  <option>4:00</option>
-					  <option>ITS KHANGURA TIME</option>
+					  <option>5:00</option>
+					  <option>6:00</option>
+					  <option>7:00</option>
+					  <option>8:00</option>
+					  <option>9:00</option>
+					  <option>10:00</option>
+					  <option>11:00</option>
+					  <option>12:00</option>
 					</select>
+				</label>
+			</ion-item>
+			<ion-item class="item-input">
+				<label>
+					<span class="input-label">Date</span>
+					<input type="date" ng-model="date">
 				</label>
 			</ion-item>
 			<ion-item class="item-input">
@@ -45,7 +61,12 @@
 						<option>2</option>
 						<option>3</option>
 						<option>4</option>
-						
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
 					</select>
 					
 				</label>

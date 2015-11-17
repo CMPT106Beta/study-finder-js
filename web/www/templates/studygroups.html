@@ -1,9 +1,11 @@
 <ion-view view-title="Study groups">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="studygroup in studygroups" href="#/app/studygroups/{{studygroup.id}}">
+    <ion-list class="card">
+      <ion-item ng-repeat="studygroup in studygroups" href="#/studygroups/:id">
         {{studygroup.course}}
-		{{studygroup.location}}
+		{{studygroup.startTime}}
+		{{studygroup.date}}
+		{{studygroup.capacity}}
       </ion-item>
     </ion-list>
   </ion-content>
