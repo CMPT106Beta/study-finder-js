@@ -142,7 +142,7 @@ angular.module('starter.controllers',[])
 .controller('studyGroupCtrl', function($scope, $http, $location, $stateParams){
     var id = $stateParams.id;
     $http.get('api/groups/'+id).success(function(data) {
-        $scope.studyGroup = data;
+        $scope.group = data;
       });
 });
 
