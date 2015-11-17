@@ -7,13 +7,5 @@
 
 ion-content{
 	background-color:#AA0000;
-}
-
-.scroll{
-	height:100%;
-}
-
-i{
-	margin-left:auto;
-	margin-right:auto;
+	overflow:auto !important;
 }
