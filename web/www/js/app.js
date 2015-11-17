@@ -92,11 +92,11 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellize
       }
     })
   .state('app.single', {
-    url: '/studygroups/:playlistId',
+    url: '/studygroups/:id',
     views: {
       'menuContent': {
-        templateUrl: 'templates/studygroups.html',
-        controller: 'studygroupsCtrl'
+        templateUrl: 'templates/studygroup.html',
+        controller: 'studyGroupCtrl'
       }
     }
   })

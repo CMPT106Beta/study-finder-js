@@ -127,7 +127,7 @@ angular.module('starter.controllers',[])
 	}
 	
 	$scope.createInput = function() {
-	  $http.post('/api/group', $scope.create)
+	  $http.post('/api/groups', $scope.create)
 		.success(function(data) {
 			$scope.create = data;
 			console.log(data);
@@ -137,6 +137,12 @@ angular.module('starter.controllers',[])
 		});
 	};
 	})
+.controller('studyGroupCtrl', function($scope, $http, $location, $stateParams){
+    var id = $stateParams.id;
+    $http.get('api/groups/'+id).success(function(data) {
+        $scope.studyGroup = data;
+      });
+});
 
 /*.controller('searchCtrl', function($scope,$http) {
 	$scope.search = {[
