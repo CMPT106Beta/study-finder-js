@@ -128,7 +128,6 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellize
     }
   });
 
-
   $urlRouterProvider.otherwise('/auth');
 
 
