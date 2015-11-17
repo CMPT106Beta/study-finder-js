@@ -1,44 +1,49 @@
 <!--Authentication view: Login and Sign up pages are sliders that swithces between pages by swiping the screen or clicking the pager-->
-<link href="css/style.css" rel="stylesheet">
+<ion-view hide-back-button="true" class="loginView">
 <ion-content ng-controller="AppCtrl">
 
 	<ion-slide-box pager-click="changeSlide(index)">
-	
 		<ion-slide>
+         
 		<ion-scroll zooming="true" direction="xy" style="height: 100%">
 		<ion-header-bar class="bar-dark"><h1 class="title">Login</h1></ion-header-bar>
-		
-			<div class="col-sm-4 col-sm-offset-4 ">
+                <div class="row responsive-sm responsive-md">
+    <div class="col col-50 col-offset-25">
 				<div class="well list padding has-header"> 
-				<img class="item item-image" src="..\img\slogo3.png">
-					<form>
+				<img class="item item-image" src="..\img\slogo4.png">
+					<form name="loginForm">
 						<div class="form-group">
 							<label class="item item-input">
 								<span class="input-label">Email:</span>
-								<input type="email" class="form-control" placeholder="...@sfu.ca" ng-model="auth.email">
+								<input type="email" name="username" class="form-control" placeholder="...@sfu.ca" ng-minlength="6" required ng-model="auth.email">
 							</label>
 						</div>
 						
 						<div class="form-group">
 							<label class="item item-input">
 								<span class="input-label">Password:</span>
-								<input type="password" class="form-control" placeholder="Password" ng-model="auth.password">
+								<input type="password" name="password" class="form-control" placeholder="Password" ng-minlength="6" required ng-model="auth.password">
 							</label>
 						</div>
-						<button class="btn btn-primary button button-dark button-block" ng-click="auth.login()">Submit</button>
+						<button class="btn btn-primary button button-dark button-block" ng-disabled="loginForm.$invalid" ng-click="auth.login()">Submit</button>
+                        <a>Create Account</a>
 					</form>
 				</div>
-			</div>
+                  </div>
+         </div>
+
 		</ion-scroll>
+       
 		</ion-slide>
 	
 		
 		<ion-slide>
 		<ion-scroll zooming="true" direction="xy" style="height: 100%">
 			<ion-header-bar class="bar-dark"><h1 class="title">Sign Up</h1></ion-header-bar>
-			<div>
+			 <div class="row responsive-sm responsive-md">
+    <div class="col col-50 col-offset-25">
 				<div class="list has-header padding">
-					<img class="item item-image" src="..\img\slogo3.png"> 
+					<img class="item item-image" src="..\img\slogo4.png"> 
 					<label class = "item item-input">
 						<span class="input-label">Email:</span>
                         <input type="email" class="form-control" placeholder="...@sfu.ca" ng-model="auth.email">
@@ -50,8 +55,10 @@
                     <button class="btn btn-primary button button-dark button-block" ng-click="auth.signup()">Sign Up</button>
 				</div>
 			</div>
+            </div>
 			
 		</ion-scroll>	
 		</ion-slide>
 	</ion-slide-box>
 </ion-content>
+</ion-view>
