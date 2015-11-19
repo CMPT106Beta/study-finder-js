@@ -4,13 +4,11 @@
 		<ion-item class="item-divider">Create Study Groups</ion-item>
 		<form ng-submit="createInput()">
 			<ion-item class="item-input">
-				<label>
 					<span class="input-label">Course Code</span>
 					<select ng-model="create.courseCode">
 					<option></option>
 						<option ng-repeat="option in codes.options">{{option}}</option>
 					</select>
-				</label>
 				<label>
 					<span class="input-label">Course Number</span>
 					<input type="text" ng-model="create.courseNumber">

@@ -119,7 +119,7 @@ angular.module('starter.controllers',[])
 .controller('createCtrl', function($scope,$http) {
 	$scope.codes = {
 		options: ["ACMA","ALS","APMA","ARAB", "ARCH", "ASC", "BISC", "BOT", "BPK", "BUEC", "BUS", "CHEM", "CHIN", "CMNS", "CMPT", "COGS", "CRIM", "DEVS", "DIAL", "DMED", "EAS", "EASC", "EBP", "ECO", "ECON", "EDPR", "EDUC", "ENGL", "ENSC", "ETEC", "EVSC", "EXPL", "FAL", "FAN", "FNLG", "FNST", "FPA", "FREN", "GEOG", "GERM", "GERO", "GRK", "GS", "GSWS", "HIST", "HS", "HSCI", "HUM", "IAT", "IS", "ISPO", "ITAL", "JAPN", "LANG", "LAS", "LBRL", "LBST", "LING", "LS", "MACM", "MASC", "MATH", "MBB", "MSE", "MSSC", "MTEC", "NUSC", "ONC", "PERS", "PHIL", "PHYS", "PLCY", "POL", "PSYC",, "PUB", "REM", "SA", "SAR", "SCD", "SCI", "SPAN", "STAT", "URB", "WL"]
-}
+};
 	$scope.create = {
 		courseCode: '',
 		courseNumber: 1,
@@ -127,7 +127,7 @@ angular.module('starter.controllers',[])
 		location: '',
 		description: '',
 		date: '',
-	}
+	};
 	
 	$scope.createInput = function() {
 	  $http.post('/api/groups', $scope.create)
@@ -144,18 +144,23 @@ angular.module('starter.controllers',[])
     $http.get('/api/groups/'+id).success(function(data) {
         $scope.group = data;
       });
-});
+})
 
-/*.controller('searchCtrl', function($scope,$http) {
-	$scope.search = {[
-		course: 'course',
+.controller('searchCtrl', function($scope,$http) {
+	$scope.search = {
+		courseCode: 'course',
+		courseNum: 101,
 		time: 'time',
 		capacity: 1,
 		groupID: 1
-	]}
+	};
 	
-	$scope.searchInput = function(groupID) {
-	  $http.put('/api/group', $scope.search)
+	$scope.codes = {
+		options: ["ACMA","ALS","APMA","ARAB", "ARCH", "ASC", "BISC", "BOT", "BPK", "BUEC", "BUS", "CHEM", "CHIN", "CMNS", "CMPT", "COGS", "CRIM", "DEVS", "DIAL", "DMED", "EAS", "EASC", "EBP", "ECO", "ECON", "EDPR", "EDUC", "ENGL", "ENSC", "ETEC", "EVSC", "EXPL", "FAL", "FAN", "FNLG", "FNST", "FPA", "FREN", "GEOG", "GERM", "GERO", "GRK", "GS", "GSWS", "HIST", "HS", "HSCI", "HUM", "IAT", "IS", "ISPO", "ITAL", "JAPN", "LANG", "LAS", "LBRL", "LBST", "LING", "LS", "MACM", "MASC", "MATH", "MBB", "MSE", "MSSC", "MTEC", "NUSC", "ONC", "PERS", "PHIL", "PHYS", "PLCY", "POL", "PSYC",, "PUB", "REM", "SA", "SAR", "SCD", "SCI", "SPAN", "STAT", "URB", "WL"]
+		};
+	
+	/*$scope.searchInput = function(groupID) {
+	  $http.put('/api/groups/search', $scope.search)
 		.success(function(data) {
 			$scope.create = data;
 			console.log(data);
@@ -163,10 +168,10 @@ angular.module('starter.controllers',[])
 		.error(function(data) {
 			console.log('Error: ' + data)
 		});
-	}
+	}*/
 	
 	
-})*/
+})
 
 	
 

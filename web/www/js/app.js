@@ -70,7 +70,8 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router','satellize
     url: '/search',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/search.html',
+		controller: 'searchCtrl'
       }
     }
   })
