@@ -2,7 +2,7 @@
   <ion-content>
 	<ion-list class="card">
 		<ion-item class="item-divider">Search by Filters</ion-item>
-		<form <!--ng-submit="searchInput(groupID)"-->>
+		<form ng-submit="searchInput()">
 			<ion-item >
 				<label class="item-input item-select">
 				<label>
@@ -16,26 +16,7 @@
 			<ion-item>
 				<label class="item-input item-select">
 					<span class="input-label">Course Code</span>
-					<input type="text" ng-model="search.courseNum">
-				</label>
-			</ion-item>
-			<ion-item>
-				<label class="item-input item-select">
-					<span class="input-label">Time</span>
-					<select>
-					  <option>1:00</option>
-					  <option>2:00</option>
-					  <option>3:00</option>
-					  <option>4:00</option>
-					  <option>5:00</option>
-					  <option>6:00</option>
-					  <option>7:00</option>
-					  <option>8:00</option>
-					  <option>9:00</option>
-					  <option>10:00</option>
-					  <option>11:00</option>
-					  <option>12:00</option>
-					</select>
+					<input type="text" ng-model="search.courseNumber">
 				</label>
 			</ion-item>
 			<ion-item>
@@ -48,6 +29,13 @@
 				<button class="button button-block button-positive" type="submit">Search</button>
 			</label>
 		</form>
+	</ion-list>
+	<ion-list ng-repeat="studygroup in results" class="card">
+		<ion-item href="#/app/studygroups/{{studygroup.id}}">
+			<p> Course: {{studygroup.courseCode}} {{studygroup.courseNumber}}</p>
+			<p> Start Time:  {{studygroup.startTime}} </p>
+			<p> Date: {{studygroup.date}} </p>
+		</ion-item>
 	</ion-list>
   </ion-content>
 </ion-view>

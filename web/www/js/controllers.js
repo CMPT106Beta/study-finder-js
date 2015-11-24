@@ -148,9 +148,8 @@ angular.module('starter.controllers',[])
 
 .controller('searchCtrl', function($scope,$http) {
 	$scope.search = {
-		courseCode: 'course',
-		courseNum: 101,
-		time: 'time',
+		courseCode: '',
+		courseNumber: 0,
 		capacity: 1,
 		groupID: 1
 	};
@@ -158,18 +157,19 @@ angular.module('starter.controllers',[])
 	$scope.codes = {
 		options: ["ACMA","ALS","APMA","ARAB", "ARCH", "ASC", "BISC", "BOT", "BPK", "BUEC", "BUS", "CHEM", "CHIN", "CMNS", "CMPT", "COGS", "CRIM", "DEVS", "DIAL", "DMED", "EAS", "EASC", "EBP", "ECO", "ECON", "EDPR", "EDUC", "ENGL", "ENSC", "ETEC", "EVSC", "EXPL", "FAL", "FAN", "FNLG", "FNST", "FPA", "FREN", "GEOG", "GERM", "GERO", "GRK", "GS", "GSWS", "HIST", "HS", "HSCI", "HUM", "IAT", "IS", "ISPO", "ITAL", "JAPN", "LANG", "LAS", "LBRL", "LBST", "LING", "LS", "MACM", "MASC", "MATH", "MBB", "MSE", "MSSC", "MTEC", "NUSC", "ONC", "PERS", "PHIL", "PHYS", "PLCY", "POL", "PSYC",, "PUB", "REM", "SA", "SAR", "SCD", "SCI", "SPAN", "STAT", "URB", "WL"]
 		};
-	
-	/*$scope.searchInput = function(groupID) {
-	  $http.put('/api/groups/search', $scope.search)
+		
+	$scope.searchInput = function() {
+	$scope.results = [];
+	console.log($scope.search);
+	  $http.get('/api/groups/search', {params: $scope.search})
 		.success(function(data) {
-			$scope.create = data;
-			console.log(data);
+			$scope.results = data;
 			})
 		.error(function(data) {
 			console.log('Error: ' + data)
 		});
-	}*/
-	
+	};
+
 	
 })
 
