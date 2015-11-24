@@ -123,7 +123,7 @@ angular.module('starter.controllers',[])
 	};
     })
 
-.controller('createCtrl', function($scope,$http) {
+.controller('createCtrl', function($scope,$http, $state) {
 	$scope.codes = {
 		options: ["ACMA","ALS","APMA","ARAB", "ARCH", "ASC", "BISC", "BOT", "BPK", "BUEC", "BUS", "CHEM", "CHIN", "CMNS", "CMPT", "COGS", "CRIM", "DEVS", "DIAL", "DMED", "EAS", "EASC", "EBP", "ECO", "ECON", "EDPR", "EDUC", "ENGL", "ENSC", "ETEC", "EVSC", "EXPL", "FAL", "FAN", "FNLG", "FNST", "FPA", "FREN", "GEOG", "GERM", "GERO", "GRK", "GS", "GSWS", "HIST", "HS", "HSCI", "HUM", "IAT", "IS", "ISPO", "ITAL", "JAPN", "LANG", "LAS", "LBRL", "LBST", "LING", "LS", "MACM", "MASC", "MATH", "MBB", "MSE", "MSSC", "MTEC", "NUSC", "ONC", "PERS", "PHIL", "PHYS", "PLCY", "POL", "PSYC",, "PUB", "REM", "SA", "SAR", "SCD", "SCI", "SPAN", "STAT", "URB", "WL"]
 };
@@ -140,13 +140,14 @@ angular.module('starter.controllers',[])
 	  $http.post('/api/groups', $scope.create)
 		.success(function(data) {
 			$scope.create = data;
+            $state.go('app.studygroups');
 			})
 		.error(function(data) {
 			console.log('Error: ' + data)
 		});
 	};
 	})
-.controller('studyGroupCtrl', function($scope, $http, $location, $stateParams){
+.controller('studyGroupCtrl', function($scope, $http, $location, $stateParams, $state){
     var id = $stateParams.id;
     $http.get('/api/groups/'+id).success(function(data) {
         $scope.group = data;
