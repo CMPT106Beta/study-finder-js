@@ -1,11 +1,10 @@
 
 <ion-view view-title="Profile">
   <ion-content>
-	<ion-list>
+	<ion-list class="card">
 		<ion-item>{{ profile.email }}</ion-item>
 		<form ng-submit="updateProfile()">
 			<!--<i class="padding item icon ion-person"></i>-->
-			<div class="list">
 				<label class="item item-input">
 					<input type="file" name="filename" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" ng-model="profile.picture"></input>
 				</label>
@@ -28,9 +27,9 @@
 				</label>
 				</label>
 				<label class="item">
-					<button class="button button-block button-positive" type="submit">Save</button>
+					<button class="button button-block button-dark" type="submit">Save</button>
 				</label>
-			</div>	
+				
 		</form>
 	</ion-list>
   </ion-content>
