@@ -53,13 +53,18 @@ angular.module('starter.controllers',[])
         vm.signup = function(){
              var credentials = {
                 email: vm.email,
-                password: vm.password
+                password: vm.password,
             };
+			if (credentials.email.search("@sfu.ca")==-1) {
+				alert('Must use SFU email!!');
+			}else if(credentials.password != credentials.repeatPassword){
+				alert('Passwords must match!')
+			}else{
             $http.post('api/signup', credentials)
             .success(function(data){
                vm.login();
             });
-            
+        }    
         }
 })
 
