@@ -1,10 +1,4 @@
 /* Empty. Add your own CSS if you like */
-.slider{
-	height:100%;
-	width:100%;
-	position:relative;
-}
-
 ion-content{
 	background-color:#AA0000;
 	overflow:auto !important;
