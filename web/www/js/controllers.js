@@ -57,7 +57,7 @@ angular.module('starter.controllers',[])
             };
 			if (credentials.email.search("@sfu.ca")==-1) {
 				alert('Must use SFU email!!');
-			}else if(credentials.password != credentials.repeatPassword){
+			}else if(credentials.password != vm.repeatPassword){
 				alert('Passwords must match!')
 			}else{
             $http.post('api/signup', credentials)
