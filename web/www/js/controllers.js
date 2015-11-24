@@ -144,6 +144,16 @@ angular.module('starter.controllers',[])
     $http.get('/api/groups/'+id).success(function(data) {
         $scope.group = data;
       });
+	  
+	  $scope.del = function() {
+		$http.delete('/api/groups/'+id)
+			.success(function(data) {
+				$state.go('app.studygroups');
+			})
+			.error(function(data) {
+				console.log('Error: ' + data);
+		});
+	};
 })
 
 .controller('searchCtrl', function($scope,$http) {
@@ -166,12 +176,19 @@ angular.module('starter.controllers',[])
 			$scope.results = data;
 			})
 		.error(function(data) {
-			console.log('Error: ' + data)
+			console.log('Error: ' + data);
 		});
 	};
 
-	
 })
 
-	
+/*.controller('joinGroup', function($scope,$http) {
+	$scope.join = function() {
+		var id = $stateParams.id;
+		$http.post('/api/groups/'+id+'/join').success(function(data) {
+			console.log('got it')
+	}
+	};
+})*/
+
 
