@@ -8,6 +8,14 @@ angular.module('starter.controllers',[])
         vm.loginErrorText = '';
 
         vm.login = function() {
+                return $http.get('api/authenticate/user');
+
+                // Handle errors
+            }, function(error) {
+                vm.loginError = true;
+                vm.loginErrorText = error.data.error;
+
+                // Because we returned the $http.get request in the $auth.logi
 
             var credentials = {
                 email: vm.email,
@@ -17,15 +25,7 @@ angular.module('starter.controllers',[])
             $auth.login(credentials).then(function() {
 
                 // Return an $http request for the now authenticated
-                // user so that we can flatten the promise chain
-                return $http.get('api/authenticate/user');
-
-                // Handle errors
-            }, function(error) {
-                vm.loginError = true;
-                vm.loginErrorText = error.data.error;
-
-                // Because we returned the $http.get request in the $auth.login
+                // user so that we can flatten the promise chainn
                 // promise, we can chain the next promise to the end here
             }).then(function(response) {
 
@@ -53,12 +53,19 @@ angular.module('starter.controllers',[])
         vm.signup = function(){
              var credentials = {
                 email: vm.email,
-                password: vm.password
+                password: vm.password,
+				repeatPassword: vm.repeatPassword
             };
+			if (credentials.email.search("sfu.ca")==-1) {
+				alert('Must use SFU email!');
+			}else if (credentials.password != credentials.repeatPassword){
+				alert('Passwords must match! You dumbass!')
+			}else{
             $http.post('api/signup', credentials)
             .success(function(data){
                vm.login();
             });
+			}
             
         }
 })
