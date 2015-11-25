@@ -5,7 +5,7 @@
 		<form ng-submit="searchInput()">
 			<ion-item >
 				<label class="item-input item-select">
-					<span class="input-label">Course</span>
+					<span class="input-label">Course Code</span>
 					<select ng-model="search.courseCode">
 					  <option ng-repeat="option in codes.options">{{option}}</option>
 					</select>
@@ -13,18 +13,18 @@
 			</ion-item>
 			<ion-item>
 				<label class="item-input">
-					<span class="input-label">Course Code</span>
-					<input type="text" ng-model="search.courseNumber">
+					<span class="input-label">Course Number</span>
+					<input type="text" placeholder="100"ng-model="search.courseNumber">
 				</label>
 			</ion-item>
 			<ion-item>
 				<label class="item-input">
 					<span class="input-label">Capacity</span>
-					<input type="text" ng-model="search.capacity">
+					<input type="text" placeholder="1" ng-model="search.capacity">
 				</label>
 			</ion-item>
 			<label class="item">
-				<button class="button button-block button-positive" type="submit">Search</button>
+				<button class="button button-block button-dark" type="submit">Search</button>
 			</label>
 		</form>
 	</ion-list>

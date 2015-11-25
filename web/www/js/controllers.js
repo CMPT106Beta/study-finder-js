@@ -83,6 +83,10 @@ angular.module('starter.controllers',[])
 		$ionicSlideBoxDelegate.slide(index,500);
 	}
 	
+	$scope.nextSlide = function() {
+		$ionicSlideBoxDelegate.next();
+	}
+	
 })
 .controller('studygroupsCtrl', function($scope,$http) {
     $http.get("/api/groups")
@@ -126,12 +130,13 @@ angular.module('starter.controllers',[])
 		options: ["ACMA","ALS","APMA","ARAB", "ARCH", "ASC", "BISC", "BOT", "BPK", "BUEC", "BUS", "CHEM", "CHIN", "CMNS", "CMPT", "COGS", "CRIM", "DEVS", "DIAL", "DMED", "EAS", "EASC", "EBP", "ECO", "ECON", "EDPR", "EDUC", "ENGL", "ENSC", "ETEC", "EVSC", "EXPL", "FAL", "FAN", "FNLG", "FNST", "FPA", "FREN", "GEOG", "GERM", "GERO", "GRK", "GS", "GSWS", "HIST", "HS", "HSCI", "HUM", "IAT", "IS", "ISPO", "ITAL", "JAPN", "LANG", "LAS", "LBRL", "LBST", "LING", "LS", "MACM", "MASC", "MATH", "MBB", "MSE", "MSSC", "MTEC", "NUSC", "ONC", "PERS", "PHIL", "PHYS", "PLCY", "POL", "PSYC", "PUB", "REM", "SA", "SAR", "SCD", "SCI", "SPAN", "STAT", "URB", "WL"]
 };
 	$scope.create = {
-		courseCode: '',
-		courseNumber: 1,
-		startTime: '',
-		location: '',
-		description: '',
-		date: '',
+		courseCode: 'ACMA',
+		courseNumber: null,
+		startTime: '9:00',
+		location: null,
+		description: null,
+		date: null,
+		capacity: '1',
 	};
 	
 	$scope.createInput = function() {
@@ -164,10 +169,10 @@ angular.module('starter.controllers',[])
 
 .controller('searchCtrl', function($scope,$http) {
 	$scope.search = {
-		courseCode: '',
-		courseNumber: 0,
-		capacity: 1,
-		groupID: 1
+		courseCode: 'ACMA',
+		courseNumber: null,
+		capacity: null,
+		groupID: null
 	};
 	
 	$scope.codes = {

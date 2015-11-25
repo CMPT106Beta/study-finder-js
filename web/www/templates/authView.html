@@ -1,7 +1,6 @@
 <!--Authentication view: Login and Sign up pages are sliders that swithces between pages by swiping the screen or clicking the pager-->
-
 <link href="css/sliders.css" rel="stylesheet">
-<ion-content ng-controller="AppCtrl" >
+<ion-pane ng-controller="AppCtrl">
 	<ion-slide-box pager-click="changeSlide(index)">
 		<ion-slide class="row responsive-sm responsive-md">
 		<ion-header-bar class="bar-dark"><h1 class="title">Login</h1></ion-header-bar>
@@ -23,7 +22,7 @@
 							</label>
 						</div>
 						<button class="btn btn-primary button button-dark button-block" ng-disabled="loginForm.$invalid" ng-click="auth.login()">Submit</button>
-                        <a>Create Account</a>
+                        <a ng-click="nextSlide()">Create Account</a>
 					</form>
                   </div>
          </div>
@@ -57,7 +56,6 @@
                     <button class="btn btn-primary button button-dark button-block" ng-click="auth.signup()">Sign Up</button>
 				</div>
 			</div>
-			
 		</ion-slide>
 	</ion-slide-box>
-</ion-content>
+</ion-pane>

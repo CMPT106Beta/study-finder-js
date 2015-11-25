@@ -3,3 +3,7 @@ ion-content{
 	background-color:#AA0000;
 	overflow:auto !important;
 }
+
+input{
+	text-align:right;
+}
