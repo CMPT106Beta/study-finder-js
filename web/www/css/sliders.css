@@ -3,6 +3,7 @@
 	width:100%;
 	position:relative;
 	background-color:#AA0000;
+	overflow-y:auto;
 }
 
 
@@ -10,3 +11,4 @@
 	height:100%;
 }
 
+	

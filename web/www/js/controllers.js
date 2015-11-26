@@ -108,10 +108,11 @@ angular.module('starter.controllers',[])
 .controller('profileController', function($scope,$http) {
     $scope.profile = { 
 	  picture: '',
-	  username: 'username',
+	  username: '',
 	  email: 'email',
 	  program: 'program',
-	  userID: 1
+	  userID: 1,
+	  imgP: '../img/slogo3.png'
 	};
 	$scope.updateProfile = function() {
 	  $http.post('/api/user/update', $scope.profile)
@@ -171,7 +172,7 @@ angular.module('starter.controllers',[])
 	$scope.search = {
 		courseCode: 'ACMA',
 		courseNumber: null,
-		capacity: null,
+		capacity: '1',
 		groupID: null
 	};
 	

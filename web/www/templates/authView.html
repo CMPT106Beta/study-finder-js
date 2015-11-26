@@ -29,6 +29,7 @@
 		</ion-slide>
 		
 		<ion-slide class="row responsive-sm responsive-md">
+		
 			<ion-header-bar class="bar-dark"><h1 class="title">Sign Up</h1></ion-header-bar>
     <div class="col col-50 col-offset-25">
 				<div class="list has-header padding">
@@ -50,12 +51,13 @@
                         <input type="password" class="form-control" placeholder="Password" ng-model="auth.password">
 					</label>
 					<label class = "item item-input">
-						<span class="input-label">Repeat password:</span>
+						<span class="input-label"><p>Repeat password:</p></span>
                         <input type="password" class="form-control" placeholder="Password" ng-model="auth.repeatPassword">
 					</label>
                     <button class="btn btn-primary button button-dark button-block" ng-click="auth.signup()">Sign Up</button>
 				</div>
 			</div>
 		</ion-slide>
+		
 	</ion-slide-box>
 </ion-pane>

@@ -2,19 +2,17 @@
 <ion-view view-title="Profile">
   <ion-content>
 	<ion-list class="card">
-		<ion-item>{{ profile.email }}</ion-item>
 		<form ng-submit="updateProfile()">
-			<!--<i class="padding item icon ion-person"></i>-->
 				<label class="item item-input">
 					<input type="file" name="filename" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" ng-model="profile.picture"></input>
 				</label>
-				<img id="image-holder" src="#" alt="your image"/>
+				<br>
+				<img id="image-holder" ng-src="{{profile.imgP}}" class="item" alt="your image"/>
 				<label class="item item-input">
 					<span class="input-label">Username</span>
-					<input type="text" ng-model="profile.username">
+					<input type="text" placeholder="Username" ng-model="profile.username">
 				</label>
-				<label class="item item-input">
-				<label>
+				<label class="item item-input item-select">
 					<span class="input-label">Program</span>
 					<select ng-model="profile.program">
 					  <option>Arts</option>
@@ -23,7 +21,6 @@
 					  <option>Computing Science</option>
 					  <option>Engineering</option>
 					</select>
-				</label>
 				</label>
 				<label class="item">
 					<button class="button button-block button-dark" type="submit">Save</button>
