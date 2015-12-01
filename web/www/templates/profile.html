@@ -7,7 +7,8 @@
 					<input type="file" name="filename" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" ng-model="profile.picture"></input>
 				</label>
 				<br>
-				<img id="image-holder" ng-src="{{profile.imgP}}" class="item" alt="your image"/>
+
+				<img id="image-holder" class="item icon ion-person" alt=" "/>
 				<label class="item item-input">
 					<span class="input-label">Username</span>
 					<input type="text" placeholder="Username" ng-model="profile.username">
