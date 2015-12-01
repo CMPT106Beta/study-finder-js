@@ -153,14 +153,21 @@ angular.module('starter.controllers',[])
         $scope.group = data;
       });
 	  
-	  $scope.del = function() {
+	$scope.del = function() {
 		$http.delete('/api/groups/'+id)
 			.success(function(data) {
 				$state.go('app.studygroups');
 			})
 			.error(function(data) {
 				console.log('Error: ' + data);
-		});
+			});
+	};
+		
+	$scope.join = function() {
+		var id = $stateParams.id;
+		$http.post('/api/groups/'+id+'/join').success(function(data) {
+			console.log('got it');
+	})
 	};
 })
 
@@ -168,7 +175,6 @@ angular.module('starter.controllers',[])
 	$scope.search = {
 		courseCode: 'ACMA',
 		courseNumber: null,
-		capacity: '1',
 		groupID: null
 	};
 	
