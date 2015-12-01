@@ -93,20 +93,11 @@ angular.module('starter.controllers',[])
     .success(function(response) {
         $scope.studygroups = response;
      });
-/*
-  $scope.studygroups = [
-    { title: 'Pop', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-*/
   
 })
 .controller('profileController', function($scope,$http) {
-    $scope.profile = { 
+    
+     $scope.profile = { 
 	  picture: '',
 	  username: '',
 	  email: 'email',
@@ -114,6 +105,11 @@ angular.module('starter.controllers',[])
 	  userID: 1,
 	  imgP: '../img/slogo3.png'
 	};
+    
+    $http.get("/api/user/profile")
+    .success(function(response) {
+        $scope.profile = response;
+     });
 	$scope.updateProfile = function() {
 	  $http.post('/api/user/update', $scope.profile)
 		.success(function(data) {
