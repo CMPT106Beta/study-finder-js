@@ -1,12 +1,24 @@
 <ion-view cache-view="false" view-title="My Study Groups">
   <ion-content>
+  <div ng-show="studygroups.length" class="item item-text-wrap">
+    <h2>My Own</h2>
+  </div>
     <ion-list ng-repeat="studygroup in studygroups" class="card">
       <ion-item href="#/app/studygroups/{{studygroup.id}}">
         <p> Course: {{studygroup.courseCode}} {{studygroup.courseNumber}}</p>
 		<p> Start Time:  {{studygroup.startTime}} </p>
 		<p> Date: {{studygroup.date}} </p>
       </ion-item>
-	 
+    </ion-list>
+  <div ng-show="studyGroupsJoined.length" class="item item-text-wrap">
+    <h2>Joined</h2>
+  </div>
+    <ion-list ng-repeat="studygroup in studyGroupsJoined" class="card">
+      <ion-item href="#/app/studygroups/{{studygroup.id}}">
+        <p> Course: {{studygroup.courseCode}} {{studygroup.courseNumber}}</p>
+		<p> Start Time:  {{studygroup.startTime}} </p>
+		<p> Date: {{studygroup.date}} </p>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>

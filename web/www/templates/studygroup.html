@@ -20,8 +20,8 @@
 			<p>Description: {{group.description}}</p>
 		</ion-item>
 		<ion-item class="button-bar">
-		  <a class="button button-dark" ng-click="join()">Join</a>
-		  <a class="button button-dark" ng-click="del()">Delete</a>
+		  <a ng-if="allowJoin" class="button button-dark" ng-click="join()">Join</a>
+		  <a ng-if="allowDelete" class="button button-dark" ng-click="del()">Delete</a>
 		</ion-item>
 		
 	</ion-list>

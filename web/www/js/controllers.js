@@ -1,5 +1,5 @@
 angular.module('starter.controllers',[])
-
+//Auth Signup Taken from: http://ryanchenkie.com/token-based-authentication-for-angularjs-and-laravel-apps/
     .controller('AuthController',function ($auth, $state, $http, $rootScope) {
 
         var vm = this;
@@ -88,13 +88,19 @@ angular.module('starter.controllers',[])
 	}
 	
 })
+//Study Groups Controller
 .controller('studygroupsCtrl', function($scope,$http) {
     $http.get("/api/groups")
     .success(function(response) {
         $scope.studygroups = response;
      });
+     $http.get("/api/groups/joined")
+    .success(function(response) {
+        $scope.studyGroupsJoined = response;
+     });
   
 })
+//Profile Controller
 .controller('profileController', function($scope,$http) {
     
      $scope.profile = { 
@@ -121,7 +127,7 @@ angular.module('starter.controllers',[])
 		});
 	};
     })
-
+//Create Study Group Controller
 .controller('createCtrl', function($scope,$http, $state) {
 	$scope.codes = {
 		options: ["ACMA","ALS","APMA","ARAB", "ARCH", "ASC", "BISC", "BOT", "BPK", "BUEC", "BUS", "CHEM", "CHIN", "CMNS", "CMPT", "COGS", "CRIM", "DEVS", "DIAL", "DMED", "EAS", "EASC", "EBP", "ECO", "ECON", "EDPR", "EDUC", "ENGL", "ENSC", "ETEC", "EVSC", "EXPL", "FAL", "FAN", "FNLG", "FNST", "FPA", "FREN", "GEOG", "GERM", "GERO", "GRK", "GS", "GSWS", "HIST", "HS", "HSCI", "HUM", "IAT", "IS", "ISPO", "ITAL", "JAPN", "LANG", "LAS", "LBRL", "LBST", "LING", "LS", "MACM", "MASC", "MATH", "MBB", "MSE", "MSSC", "MTEC", "NUSC", "ONC", "PERS", "PHIL", "PHYS", "PLCY", "POL", "PSYC", "PUB", "REM", "SA", "SAR", "SCD", "SCI", "SPAN", "STAT", "URB", "WL"]
@@ -147,10 +153,19 @@ angular.module('starter.controllers',[])
 		});
 	};
 	})
+    //Study Group Controller
 .controller('studyGroupCtrl', function($scope, $http, $location, $stateParams, $state){
     var id = $stateParams.id;
     $http.get('/api/groups/'+id).success(function(data) {
         $scope.group = data;
+        user = JSON.parse(window.localStorage['user']);
+         if(user.id == $scope.group.user_id){
+            $scope.allowDelete = true;
+            $scope.allowJoin = false;
+        }else{
+            $scope.allowDelete = false;
+            $scope.allowJoin = true;
+        }
       });
 	  
 	$scope.del = function() {
@@ -170,10 +185,10 @@ angular.module('starter.controllers',[])
 	})
 	};
 })
-
+//Search Controller
 .controller('searchCtrl', function($scope,$http) {
 	$scope.search = {
-		courseCode: 'ACMA',
+		courseCode: '',
 		courseNumber: null,
 		groupID: null
 	};
@@ -195,14 +210,4 @@ angular.module('starter.controllers',[])
 	};
 
 })
-
-/*.controller('joinGroup', function($scope,$http) {
-	$scope.join = function() {
-		var id = $stateParams.id;
-		$http.post('/api/groups/'+id+'/join').success(function(data) {
-			console.log('got it')
-	}
-	};
-})*/
-
 
