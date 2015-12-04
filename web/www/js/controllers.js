@@ -181,7 +181,7 @@ angular.module('starter.controllers',[])
 	$scope.join = function() {
 		var id = $stateParams.id;
 		$http.post('/api/groups/'+id+'/join').success(function(data) {
-			console.log('got it');
+			$state.go('app.studygroups');
 	})
 	};
 })
